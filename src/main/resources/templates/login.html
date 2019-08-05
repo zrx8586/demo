@@ -14,7 +14,7 @@
     <header class="layui-elip">登录</header>
     <form class="layui-form">
         <div class="layui-input-inline">
-            <input type="text" name="account" required lay-verify="required" placeholder="用户名" autocomplete="off"
+            <input type="text" name="username" required lay-verify="required" placeholder="用户名" autocomplete="off"
                    class="layui-input">
         </div>
         <div class="layui-input-inline">
@@ -46,13 +46,13 @@
         form.on('submit(login)',function (data) {
             // console.log(data.field);
             $.ajax({
-                url:'login.php',
+                url:'user/login',
                 data:data.field,
                 dataType:'text',
                 type:'post',
                 success:function (data) {
-                    if (data == '1'){
-                        location.href = "../index.php";
+                    if (data == 'success'){
+                        location.href = "../index";
                     }else{
                         layer.msg('登录名或密码错误');
                     }

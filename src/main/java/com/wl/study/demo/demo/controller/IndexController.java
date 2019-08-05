@@ -2,7 +2,6 @@ package com.wl.study.demo.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -14,7 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class IndexController {
 
-    @GetMapping("")
+
+    @GetMapping("index")
     public String index() {
         return "index";
     }
@@ -36,9 +36,4 @@ public class IndexController {
         return "success";
     }
 
-    @RequestMapping("checkUser")
-    @ResponseBody
-    public String checkUser(){
-        return "success";
-    }
 }

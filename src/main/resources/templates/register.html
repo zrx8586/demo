@@ -83,15 +83,15 @@
 
             //alert(user);
             $.ajax({
-                url:'checkUser',
+                url:'user/checkUser',
                 type:'post',
                 dataType:'text',
                 data:{user:user},
                 //验证用户名是否可用
                 success:function(data){
-                    alert(data);
+                    // alert(data);
 
-                    if (data == 1) {
+                    if (data == 'success') {
                         $('#ri').removeAttr('hidden');
                         $('#wr').attr('hidden','hidden');
 
@@ -139,7 +139,7 @@
         //添加表单监听事件,提交注册信息
         form.on('submit(sub)', function() {
             $.ajax({
-                url:'reg.php',
+                url:'user/register',
                 type:'post',
                 dataType:'text',
                 data:{
@@ -147,9 +147,9 @@
                     pwd:$('#pwd').val(),
                 },
                 success:function(data){
-                    if (data == 1) {
+                    if (data == 'success') {
                         layer.msg('注册成功');
-                        ///location.href = "login.html";
+                        // location.href = "login";
                     }else {
                         layer.msg('注册失败');
                     }

@@ -31,7 +31,7 @@
 
         <javaModelGenerator targetPackage="com.wl.study.demo.demo.dao.domain" targetProject="src/main/java"/>
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources/mybatis/"/>
-        <javaClientGenerator targetPackage="ccom.wl.study.demo.demo.dao.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+        <javaClientGenerator targetPackage="com.wl.study.demo.demo.dao.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
         <table tableName="%">
             <generatedKey column="id" sqlStatement="Mysql"/>
         </table>
